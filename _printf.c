@@ -55,5 +55,5 @@ int _printf(const char *format, ...)
 	}
 	va_end(arg);
 
-	return count;
+	return (count);
 }
