@@ -30,6 +30,18 @@ int gprintf(const char *format, ...)
 				putchar(c);
 				count++;
 			}
+			else if (format[i] == 'i')
+			{
+				c = (char)va_arg(arg, int);
+				putchar(c);
+				count++;
+			}
+			else if (format[i] == 'd')
+			{
+				c = (char)va_arg(arg, int);
+				putchar(c);
+				count++;
+			}
 			else if (format[i] == 's')
 			{
 				str = va_arg(arg, char *);
