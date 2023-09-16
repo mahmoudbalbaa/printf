@@ -29,11 +29,11 @@ int main(void)
 	_printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
 	printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui); */
 	_printf("Character:[%c1%c1%c1%c]\n", 'H', 'b', 'g', 'c');
-	printf("Character:[%c]\n", 'H');
+	printf("Character:[%c1%c1%c1%c]\n", 'H', 'b', 'g', 'c');
 	_printf("String:[%s][%s][%s][%s]\n", "I am a string !", "I am a string !", "I am a string !", "I am a string !");
-	printf("String:[%s]\n", "I am a string !");
+	printf("String:[%s][%s][%s][%s]\n", "I am a string !", "I am a string !", "I am a string !", "I am a string !");
 	len = _printf("Percent:[%%][%%][%%][%%]\n");
-	len2 = printf("Percent:[%%]\n");
+	len2 = printf("Percent:[%%][%%][%%][%%]\n");
 	len2 = printf("Percent:[%%]\n");
 	len2 = printf("Percent:[%%]\n");
 
