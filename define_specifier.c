@@ -13,6 +13,7 @@ char *define_specifier(char format, va_list arg)
 	int i;
 	speci_data data_tbl[] = {
 		{"c", speci_char},
+		{"s", speci_str},
 		{NULL, NULL},
 	};
 
