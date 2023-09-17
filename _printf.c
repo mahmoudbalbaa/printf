@@ -27,8 +27,8 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			if (!format[i + 1] || (format[i + 1] == ' ' && !format[i + 2]))
-				return (-1);
+			if (!format[i+1]||format[i+1]==' ')
+			return(-1);
 			i++;
 			count += _define_specifier(format[i], arg);
 		}
@@ -57,25 +57,17 @@ int _define_specifier(char x, va_list arg)
 	switch (x)
 	{
 		case 'c':
-			if(c = (char) va_arg(arg, int))
-			{
-				putchar(c);
-				count++;
-			}
-			else 
-				return (-1);
+			c = (char)va_arg(arg, int);
+			putchar(c);
+			count++;
 			break;
 		case 's':
-			if(s = va_arg(arg, char *))
-			{	
-				while (*s)
-				{
-					putchar(*s++);
-					count++;
-				}
+			s = va_arg(arg, char *);
+			while (*s)
+			{
+				putchar(*s++);
+				count++;
 			}
-			else
-				return (-1);
 			break;
 		case '%':
 			putchar('%');
