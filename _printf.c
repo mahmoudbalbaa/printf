@@ -57,17 +57,25 @@ int _define_specifier(char x, va_list arg)
 	switch (x)
 	{
 		case 'c':
-			c = (char) va_arg(arg, int);
-			putchar(c);
-			count++;
-			break;
-		case 's':
-			s = va_arg(arg, char *);
-			while (*s)
+			if(c = (char) va_arg(arg, int))
 			{
-				putchar(*s++);
+				putchar(c);
 				count++;
 			}
+			else 
+				return (-1);
+			break;
+		case 's':
+			if(s = va_arg(arg, char *))
+			{	
+				while (*s)
+				{
+					putchar(*s++);
+					count++;
+				}
+			}
+			else
+				return (-1);
 			break;
 		case '%':
 			putchar('%');
