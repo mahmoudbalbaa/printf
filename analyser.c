@@ -12,12 +12,15 @@ int analyser(const char *format, va_list arg)
 	int i, count = 0;
 	char *buff = NULL;
 
+	if (format == NULL)
+		return (-1);
+
 	for (i = 0; format != NULL && format[i]; i++)
 	{
 		if (format[i] == '%')
 		{
 			i++;
-			if (format[i] == '\0')
+			if ((format[i] == '\0') || (format[i] == ' ' && !format[i + 1]))
 				return (-1);
 			if (format[i] == '%')
 			{

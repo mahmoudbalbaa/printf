@@ -21,7 +21,7 @@ int _printf(const char *format, ...)
 
 	va_start(arg, format);
 
-	count = analyser(format, arg);
+	count += analyser(format, arg);
 
 	va_end(arg);
 
