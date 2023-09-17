@@ -63,7 +63,7 @@ int _define_specifier(char x, va_list arg)
 			break;
 		case 's':
 			if(isdigit(va_arg(arg, char *))!=0)
-				break;
+				return (-1);
 			s = va_arg(arg, char *);
 			while (*s)
 			{
