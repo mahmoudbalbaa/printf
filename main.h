@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#include <limit.h>
+#include <limits.h>
 #include <stdarg.h>
 
 /**
@@ -21,7 +21,8 @@ typedef struct speci_lst
 } speci_data;
 
 int _printf(const char *format, ...);
-int define_specifier(char format, va_list arg);
+int analyser(const char *format, va_list arg);
+char *define_specifier(char format, va_list arg);
 char *speci_char(va_list arg);
 
 #endif /* _MAIN_H */

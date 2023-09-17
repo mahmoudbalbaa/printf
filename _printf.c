@@ -14,26 +14,16 @@
 int _printf(const char *format, ...)
 {
 	va_list arg;
-	int count = 0, i;
+	int count = 0;
 
 	if (!format)
 		return (-1);
+
 	va_start(arg, format);
-	for (i = 0; format[i] != '\0'; i++)
-	{
-		if (format[i] == '%')
-		{
-			i++;
-			if (!format[i] || format[i] == ' ' || format[i] == '\0')
-				return (-1);
-			count += _define_specifier(format[i], arg);
-		}
-		else
-		{
-			putchar(format[i]);
-			count++;
-		}
-	}
+
+	count = analyser(format, arg);
+
 	va_end(arg);
+
 	return (count);
 }

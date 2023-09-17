@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _speci_char - a func to pointer
+ * speci_char - a func to pointer
  * @arg: a variadic list of arguments
  * Return: NULL if c equals NULL or c if not
  */
