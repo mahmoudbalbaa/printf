@@ -57,7 +57,7 @@ int _define_specifier(char x, va_list arg)
 	switch (x)
 	{
 		case 'c':
-			c = (char) va_arg(arg, char); // get the next argument of type char and cast it back to char
+			c = (char) va_arg(arg, int);
 			putchar(c);
 			count++;
 			break;
