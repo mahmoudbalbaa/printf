@@ -29,8 +29,8 @@ int analyser(const char *format, va_list arg)
 				buff = define_specifier(format[i], arg);
 				if (buff == NULL)
 					return (-1);
-				count++;
-				puts(buff);
+				count += strlen(buff);
+				fwrite(buff, sizeof(char), strlen(buff), stdout);
 			}
 		}
 		else

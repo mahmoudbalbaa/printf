@@ -7,6 +7,7 @@
 #include <ctype.h>
 #include <limits.h>
 #include <stdarg.h>
+#include <unistd.h>
 
 /**
  * struct speci_lst - struct for define specifier

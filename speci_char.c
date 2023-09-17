@@ -14,6 +14,5 @@ char *speci_char(va_list arg)
 		return (NULL);
 	c[0] = (char)va_arg(arg, int);
 	c[1] = '\0';
-
 	return (c);
 }
