@@ -58,8 +58,6 @@ int _define_specifier(char x, va_list arg)
 	{
 		case 'c':
 			c = (char) va_arg(arg, int);
-			if ((c > 'A' || c < 'Z') && (c > 'a' || c < 'z'))
-				return (-1);
 			putchar(c);
 			count++;
 			break;
