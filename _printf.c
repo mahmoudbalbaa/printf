@@ -1,10 +1,5 @@
 #include "main.h"
-#include <stdio.h>
-#include <string.h>
-#include <stdarg.h>
-#include <ctype.h>
 
-int _define_specifier(char x, va_list arg);
 
 /**
  * _printf - function that produces output according to a format
@@ -28,9 +23,9 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			if (!format[i + 1] || format[i + 1] == ' ')
-			return (-1);
 			i++;
+			if (!format[i] || format[i] == ' ' || format[i] == '\0')
+				return (-1);
 			count += _define_specifier(format[i], arg);
 		}
 		else
@@ -40,43 +35,5 @@ int _printf(const char *format, ...)
 		}
 	}
 	va_end(arg);
-	return (count);
-}
-
-/**
- * _define_specifier - a function defines the type of specifier
- * @x: a character
- * @arg: a variadic list of arguments
- * Return: the value of count
- */
-
-int _define_specifier(char x, va_list arg)
-{
-	char c, *s;
-	int count = 0;
-
-	switch (x)
-	{
-		case 'c':
-			c = (char)va_arg(arg, int);
-			putchar(c);
-			count++;
-			break;
-		case 's':
-			s = va_arg(arg, char *);
-			while (*s)
-			{
-				putchar(*s++);
-				count++;
-			}
-			break;
-		case '%':
-			putchar('%');
-			count++;
-			break;
-		default:
-			return (-1);
-	}
-
 	return (count);
 }
