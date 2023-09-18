@@ -21,7 +21,7 @@ typedef struct speci_lst
 	char *(*speci_op)(va_list);
 } speci_data;
 
-char* itoa(int value, char* str, int base);
+char *itoa(int value, char *str, int base);
 int _printf(const char *format, ...);
 int analyser(const char *format, va_list arg);
 char *define_specifier(char format, va_list arg);
