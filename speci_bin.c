@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * speci_int -handling %i
+ * speci_bin -handling %b
  * @arg: an argument list
  * Return: NULL if error happens or str if not
  */
