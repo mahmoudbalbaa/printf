@@ -21,7 +21,7 @@ int int_to_binary(unsigned int k)
 int pf_bin(va_list args)
 {
 /*char *buffer;*/
-	int bin ,r;
+	int bin, r;
 int x = va_arg(args, int);
 	if (x < 0)
 		x *= -1;
