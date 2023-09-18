@@ -26,6 +26,6 @@ int x = va_arg(args, int);
 	if (x < 0)
 		x *= -1;
 bin = int_to_binary(x);
-	int print_number(bin);
+print_number(bin);
 
 }
