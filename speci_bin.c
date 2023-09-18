@@ -2,7 +2,6 @@
 
 /**
  * speci_bin -handling %b
- * int_to_binary -converting int to binary
  * @arg: an argument list
  * Return: NULL if error happens or str if not
  */
@@ -13,6 +12,11 @@ int int_to_binary(unsigned int k)
 	return ((k % 2) + 10 * int_to_binary(k / 2));
 }
 
+/**
+ * int_to_binary -converting int to binary
+ * @arg: an argument list
+ * Return: NULL if error happens or str if not
+ */
 char *speci_bin(va_list arg)
 {
 	char *buffer;
