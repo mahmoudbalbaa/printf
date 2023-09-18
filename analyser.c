@@ -15,7 +15,7 @@ int analyser(const char *format, va_list arg)
 	if ((format == NULL) || ((format[0] == '%') && (format[1] == '\0')))
 		return (-1);
 
-	again:
+again:
 
 	for (; format != NULL && format[i]; i++)
 	{
@@ -25,15 +25,15 @@ int analyser(const char *format, va_list arg)
 			if (format[i] == '%')
 			{
 				count++;
-				putchar(format[i]);
+				_putchar(format[i]);
 			}
 			else
 			{
 				buff = define_specifier(format[i], arg);
 				if (buff == NULL)
 					return (-1);
-				count += strlen(buff);
-				fwrite(buff, sizeof(char), strlen(buff), stdout);
+				count += _strlen(buff);
+				fwrite(buff, sizeof(char), _strlen(buff), stdout);
 				i++;
 				goto again;
 			}
@@ -41,7 +41,7 @@ int analyser(const char *format, va_list arg)
 		else
 		{
 			count++;
-			putchar(format[i]);
+			_putchar(format[i]);
 		}
 	}
 

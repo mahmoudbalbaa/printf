@@ -3,9 +3,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
 #include <limits.h>
+#include <string.h>
 #include <stdarg.h>
 #include <unistd.h>
 
@@ -30,5 +29,7 @@ char *speci_str(va_list arg);
 char *speci_int(va_list arg);
 char *speci_des(va_list arg);
 char *speci_bin(va_list arg);
+int _putchar(char c);
+int _strlen(char *s);
 
 #endif /* _MAIN_H */
