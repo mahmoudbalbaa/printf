@@ -14,6 +14,8 @@ char *define_specifier(char format, va_list arg)
 	speci_data data_tbl[] = {
 		{"c", speci_char},
 		{"s", speci_str},
+		{"i", speci_int},
+		{"d", speci_int},
 		{NULL, NULL},
 	};
 
