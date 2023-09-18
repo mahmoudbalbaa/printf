@@ -1,5 +1,5 @@
 #include "main.h"
-char* itoa(int value, char* str, int base) {
+char *itoa(int value, char *str, int base) {
     int i ,length;
     char* ptr;
     /* Handle negative numbers*/
