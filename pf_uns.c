@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * pf_int - function that prints integer.
+ * pf_uns - function that prints integer.
  * @args: format string.
  * Return: number of characters printed.
  */
