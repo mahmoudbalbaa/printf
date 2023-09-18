@@ -1,35 +1,35 @@
-#ifndef _MAIN_H
-#define _MAIN_H
+#ifndef MAIN_H
+#define MAIN_H
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <limits.h>
 #include <string.h>
-#include <stdarg.h>
 #include <unistd.h>
+#include <stdarg.h>
+#include <limits.h>
 
 /**
- * struct speci_lst - struct for define specifier
- * @speci_ch: hold the char of specifier
- * @speci_op: a pointer to function holds specifier's operation
+ * struct format - chooses which conv spec
+ * @f: First member
+ * @n: Second member
+ *
  */
 
-typedef struct speci_lst
+typedef struct format
 {
-	char *speci_ch;
-	char *(*speci_op)(va_list);
-} speci_data;
+	char *n;
+	int (*f)();
+} convert;
 
-char *itoa(int value, char *str, int base);
-int _printf(const char *format, ...);
-int analyser(const char *format, va_list arg);
-char *define_specifier(char format, va_list arg);
-char *speci_char(va_list arg);
-char *speci_str(va_list arg);
-char *speci_int(va_list arg);
-char *speci_des(va_list arg);
-char *speci_bin(va_list arg);
 int _putchar(char c);
+int _printf(const char *format, ...);
 int _strlen(char *s);
+int _strlenc(const char *s);
+int pf_char(va_list args);
+int pf_string(va_list args);
+int pf_perc(void);
+int pf_int(va_list args);
+int pf_dec(va_list args);
+int print_number(int n);
 
-#endif /* _MAIN_H */
+#endif
