@@ -21,11 +21,11 @@ int int_to_binary(unsigned int k)
 int pf_bin(va_list args)
 {
 /*char *buffer;*/
-	int bin;
+	int bin ,r;
 int x = va_arg(args, int);
 	if (x < 0)
 		x *= -1;
 bin = int_to_binary(x);
-print_number(bin);
-
+r = print_number(bin);
+return (r);
 }
