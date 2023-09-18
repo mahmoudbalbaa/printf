@@ -8,15 +8,15 @@
 int int_to_binary(unsigned int k)
 {
 	if (k == 0 || k == 1)
-        return k;
-	return (k % 2) + 10 * int_to_binary(k / 2);
+		return (k);
+	return ((k % 2) + 10 * int_to_binary(k / 2));
 }
 
 char *speci_bin(va_list arg)
 {
 	char *buffer;
-  unsigned int x =va_arg(arg, int);
-  unsigned int bin =int_to_binary(x);
+unsigned int x = va_arg(arg, int);
+unsigned int bin = int_to_binary(x);
 
 	buffer = malloc(sizeof(int) * 8 + 1);
 	 itoa(bin, buffer, 10);
