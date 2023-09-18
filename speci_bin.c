@@ -17,8 +17,8 @@ char *speci_bin(va_list arg)
 {
 	char *buffer, unsigned int bin;
 int x = va_arg(arg, int);
-	if( x<0)
-		x*=-1;
+	if (x < 0)
+		x *= -1;
 bin = int_to_binary(x);
 
 	buffer = malloc(sizeof(int) * 8 + 1);
