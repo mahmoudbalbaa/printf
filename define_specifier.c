@@ -16,6 +16,7 @@ char *define_specifier(char format, va_list arg)
 		{"s", speci_str},
 		{"i", speci_int},
 		{"d", speci_des},
+		{b", speci_bin},
 		{NULL, NULL},
 	};
 
