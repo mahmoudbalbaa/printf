@@ -15,7 +15,8 @@ int int_to_binary(unsigned int k)
 
 char *speci_bin(va_list arg)
 {
-	char *buffer, unsigned int bin;
+	char *buffer;
+	unsigned int bin;
 int x = va_arg(arg, int);
 	if (x < 0)
 		x *= -1;
