@@ -6,7 +6,7 @@
  * Return: NULL if error happens or str if not
  */
 
-char speci_int(va_list arg)
+char *speci_int(va_list arg)
 {
 	int in = va_arg(arg, int);
 	char buffer [sizeof(int)*8+1];
