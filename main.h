@@ -31,5 +31,6 @@ int pf_perc(void);
 int pf_int(va_list args);
 int pf_dec(va_list args);
 int print_number(int n);
-
+int int_to_binary(unsigned int k);
+int pf_bin(va_list args);
 #endif
