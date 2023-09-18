@@ -20,7 +20,7 @@ int int_to_binary(unsigned int k)
 
 int pf_bin(va_list args)
 {
-char *buffer;
+/*char *buffer;*/
 	int bin;
 int x = va_arg(args, int);
 	if (x < 0)
