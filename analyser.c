@@ -12,7 +12,7 @@ int analyser(const char *format, va_list arg)
 	int i, count = 0;
 	char *buff = NULL;
 
-	if (format == NULL)
+	if ((format == NULL) || ((format[0] == '%') && (format[1] == '\0')))
 		return (-1);
 
 	for (i = 0; format != NULL && format[i]; i++)
