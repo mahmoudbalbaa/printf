@@ -29,5 +29,6 @@ char *speci_char(va_list arg);
 char *speci_str(va_list arg);
 char *speci_int(va_list arg);
 char *speci_des(va_list arg);
+char *speci_bin(va_list arg);
 
 #endif /* _MAIN_H */
