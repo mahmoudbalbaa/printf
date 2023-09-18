@@ -22,8 +22,6 @@ int analyser(const char *format, va_list arg)
 		if (format[i] == '%')
 		{
 			i++;
-			if ((format[i] == '\0') || (format[i] == ' ' && !format[i + 1]))
-				return (-1);
 			if (format[i] == '%')
 			{
 				count++;

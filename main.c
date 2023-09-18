@@ -40,6 +40,6 @@ int main(void)
     printf("Len:[%d]\n", len2);
    /* _printf("Unknown:[%r]\n");
     printf("Unknown:[%r]\n");*/
-    _printf("Hello %");
+    _printf("Hello %c%s\n", 'q', "I am groot");
     return (0);
 }
