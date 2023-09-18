@@ -2,7 +2,7 @@
 
 /**
  * itoa - 
- * /
+ */
 
 char *itoa(int value, char *str, int base) {
 int i ,length;
