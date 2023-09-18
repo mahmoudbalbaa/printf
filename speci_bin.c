@@ -5,11 +5,11 @@
  * @arg: an argument list
  * Return: NULL if error happens or str if not
  */
-  int int_to_binary(unsigned int k) {
-    if (k == 0 || k == 1) {
+int int_to_binary(unsigned int k)
+{
+	if (k == 0 || k == 1)
         return k;
-    }
-    return (k % 2) + 10 * int_to_binary(k / 2);
+	return (k % 2) + 10 * int_to_binary(k / 2);
 }
 
 char *speci_bin(va_list arg)
