@@ -2,6 +2,7 @@
 
 /**
  * speci_bin -handling %b
+ * int_to_binary -converting int to binary
  * @arg: an argument list
  * Return: NULL if error happens or str if not
  */
