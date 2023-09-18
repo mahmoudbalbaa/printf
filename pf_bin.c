@@ -22,7 +22,7 @@ int pf_bin(va_list args)
 {
 char *buffer;
 	int bin;
-int x = va_arg(arg, int);
+int x = va_arg(args, int);
 	if (x < 0)
 		x *= -1;
 bin = int_to_binary(x);
