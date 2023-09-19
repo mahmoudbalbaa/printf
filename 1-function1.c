@@ -1,18 +1,6 @@
 #include "main.h"
 
 /**
-* pf_perc - function that prints char.
-*
-* Return: number of characters printed.
-*/
-
-int pf_perc(void)
-{
-	_putchar('%');
-	return (1);
-}
-
-/**
  * pf_int - function that prints integer.
  * @args: format string.
  * Return: number of characters printed.
