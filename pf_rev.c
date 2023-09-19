@@ -28,7 +28,7 @@ str = va_arg(args, char *);
 
 		write(1, &z, 1);
 		count++;
-		printf("%c/n", str[i])
+		printf("%c/n", str[i]);
 	}
 	return (count);
 }
