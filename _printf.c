@@ -19,7 +19,7 @@ start:
 	while (format[i] != '\0')
 	{
 		j = 0;
-		while (j <= 9)
+		while (j <= 11)
 		{
 			if (specs[j].n[0] == format[i] &&
 				specs[j].n[1] == format[i + 1])
