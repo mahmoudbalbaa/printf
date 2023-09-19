@@ -5,15 +5,13 @@
  * @num: input int num.
  * Return: number of characters printed.
  */
-int to_lexu(unsigned int num)
-{
-    char hex[100];
-    int i = 0, j;
-    if (num == 0) 
-    {
-        printf("0");
-        return (i);
+char* to_lhex(unsigned int num) {
+    if (num == 0) {
+        return "0";
     }
+
+    static char hex[100];
+    int i = 0;
 
     while (num != 0) {
         int remainder = num % 16;
@@ -26,12 +24,15 @@ int to_lexu(unsigned int num)
         i++;
     }
 
-    for (j = i - 1; j >= 0; j--) {
-        putchar(hex[j]);
-    }
+    FILE *fp;
+    fp = fopen("file.txt", "w");
+    fwrite(hex, sizeof(char), i, fp);
+    fclose(fp);
 
-return (i);
+    hex[i] = '\0'; // Null-terminate the string
+    return hex;
 }
+
 /**
  * pf_oct - function that prints string.
  * @args: format string.
@@ -40,9 +41,12 @@ return (i);
 
 int pf_lhex(va_list args)
 {
-	int x;
+	char* x;
+	int i ,l;
+	l = _strlen(str);
 
 	x = to_lexu(va_arg(args, unsigned int));
-
-	return (x);
+ 	for (i = 0; i < l; i++)
+		_putchar(x[i]);
+	return (l);
 }
