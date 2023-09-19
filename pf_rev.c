@@ -15,8 +15,9 @@ str = va_arg(args, char *);
 
 	if (str == NULL)
 	{
-		_putchar("%");
-		_putchar("r");
+		str ="%r"
+		_putchar(str[0]);
+		_putchar(str[1]);
 		return (2);
 	}
 	for (i = 0; str[i]; i++)
