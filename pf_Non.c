@@ -17,7 +17,7 @@ int pf_Non(va_list args)
 
 	while (str[i] != '\0')
 	{
-	if (str[i] >= 32 && str[i] < 127)
+	if (str[i] >= 32 && (int)str[i] < 127)
 			buffer[i + offset] = str[i];
 		else
 			offset += (int)str[i];
