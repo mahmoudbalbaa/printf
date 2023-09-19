@@ -12,7 +12,7 @@ convert *data_specs(void)
 		{"%s", pf_string}, {"%c", pf_char}, {"%%", pf_perc},
 		{"%d", pf_dec}, {"%i", pf_int}, {"%b", pf_bin}, {"%u", pf_uns},
 		{"%o", pf_oct}, {"%x", pf_lhex}, {"%X", pf_uhex}, {"%S", pf_Non},
-		{"%p", pf_ptr}, {"%r", pf_rev}, {"%R", pf_rever}
+		{"%p", pf_ptr}, {"%r", pf_rev},
 	};
 
 	return (specs);
