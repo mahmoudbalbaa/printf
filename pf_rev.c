@@ -1,22 +1,17 @@
 #include "main.h"
 
 /**
- * print_reverse - Prints reverse string.
- * @types: Lista of arguments
- * @buffer: Buffer array to handle print
- * @flags:  Calculates active flags
- * @width: get width
- * @precision: Precision specification
- * @size: Size specifier
+ * pf_rev - Prints reverse string.
+ * @args: Lista of arguments
  * Return: Numbers of chars printed
  */
 
-int pf_rev(va_list types)
+int pf_rev(va_list args)
 {
 	char *str;
 	int i, count = 0;
 
-str = va_arg(types, char *);
+str = va_arg(args, char *);
 
 	if (str == NULL)
 	{
