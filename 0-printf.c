@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 	int i = 0, j, l = 0;
 	convert specs[] = {
 		{"%s", pf_string}, {"%c", pf_char}, {"%%", pf_perc},
-		{"%d", pf_dec}, {"%i", pf_int}, {"%b", pf_bin}, {"%u", pf_uns}, {"%o", pf_oct}, {"%x", pf_lhex}, {"%X", pf_uhex}
+		{"%d", pf_dec}, {"%i", pf_int}, {"%b", pf_bin}, {"%u", pf_uns}, {"%o", pf_oct}, {"%x", pf_lhex}, {"%X", pf_uhex}, {"%S", pf_Non}
 	};
 
 	va_start(args, format);
