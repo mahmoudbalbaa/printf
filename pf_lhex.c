@@ -8,7 +8,7 @@
 int to_lexu(unsigned int num)
 {
     char hex[100];
-    int i = 0;
+    int i = 0, j;
     if (num == 0) 
     {
         printf("0");
@@ -26,7 +26,7 @@ int to_lexu(unsigned int num)
         i++;
     }
 
-    for (int j = i - 1; j >= 0; j--) {
+    for (j = i - 1; j >= 0; j--) {
         putchar(hex[j]);
     }
 
