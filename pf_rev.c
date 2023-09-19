@@ -15,7 +15,9 @@ str = va_arg(args, char *);
 
 	if (str == NULL)
 	{
-		str = ")Null(";
+		_putchar("%");
+		_putchar("r");
+		return (2);
 	}
 	for (i = 0; str[i]; i++)
 		printf("%c", str[i]);
