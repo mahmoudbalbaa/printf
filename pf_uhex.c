@@ -7,14 +7,15 @@
  */
 int to_hexu(unsigned int num)
 {
+    char hex[100];
+    int i = 0, j;
     if (num == 0) 
     {
         printf("0");
-        return;
+        return (i);
     }
 
-    char hex[100];
-    int i = 0;
+
 
     while (num != 0) {
         int remainder = num % 16;
@@ -28,7 +29,7 @@ int to_hexu(unsigned int num)
     }
 
     printf("\nHexadecimal representation in lower case: ");
-    for (int j = i - 1; j >= 0; j--) {
+    for (j = i - 1; j >= 0; j--) {
         putchar(hex[j]);
     }
 
