@@ -12,7 +12,7 @@ int to_lexu(unsigned int num)
     if (num == 0) 
     {
         printf("0");
-        return;
+        return (i);
     }
 
     while (num != 0) {
