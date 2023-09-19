@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 	if ((format == NULL) || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 
-again:
+start:
 	while (format[i] != '\0')
 	{
 		j = 0;
@@ -34,7 +34,7 @@ again:
 			{
 				l += specs[j].f(args);
 				i += 2;
-				goto again;
+				goto start;
 			}
 			j++;
 		}
