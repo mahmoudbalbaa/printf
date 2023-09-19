@@ -17,7 +17,6 @@ int pf_Non(va_list args)
 	
 	if (str == NULL)
 		return (write(1, "(null)", 6));
-
 	while (str[i] != '\0')
 	{
 		if (is_printable(str[i]))
