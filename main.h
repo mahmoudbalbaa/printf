@@ -40,5 +40,6 @@ int pf_lhex(va_list args);
 int pf_Non(va_list args);
 convert *data_specs(void);
 int append_hexa_code(char ascii_code, char buffer[], int i);
+int pf_ptr(va_list args);
 
 #endif
