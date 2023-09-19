@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * append_hexa_code - a function returns an integer
+ * hexa_code - a function returns an integer
  * @ascii_code: a character
  * @buffer: an array of char
  * @i: an integer
