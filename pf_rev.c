@@ -30,5 +30,5 @@ str = va_arg(args, char *);
 		count++;
 		printf("%c/n", str[i]);
 	}
-	return (count);
+return (count);
 }
