@@ -17,7 +17,6 @@ int pf_rev(va_list args)
 	for (; str[len] != '\0'; len++)
 		;
 
-<<<<<<< HEAD
 	for (int i = len - 1; i >= 0; i--)
 	{
 		_putchar(str[i]);
@@ -25,11 +24,4 @@ int pf_rev(va_list args)
 	}
 
 	return (count);
-=======
-		char z = str[i];
-		count++;
-		_putchar(z);
-}
-return (count);
->>>>>>> 524e577b21c390161ed439f3877668d7ef8e1184
 }
