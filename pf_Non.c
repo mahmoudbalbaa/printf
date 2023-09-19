@@ -14,16 +14,15 @@ int pf_Non(va_list args)
 	int i = 0, offset = 0;
 	char *str = va_arg(args, char *);
 	char buffer[BUFSIZ];
-
-	if (str == NULL)
+if (str == NULL)
 		return (write(1, "(null)", 6));
 
 	while (str[i] != '\0')
 	{
-		if (str[i] >= 32 && (int)str[i] < 127)
+		if (is_printable(str[i]))
 			buffer[i + offset] = str[i];
 		else
-			offset += (int)str[i];
+			offset += append_hexa_code(str[i], buffer, i + offset);
 
 		i++;
 	}
@@ -31,4 +30,5 @@ int pf_Non(va_list args)
 	buffer[i + offset] = '\0';
 
 	return (write(1, buffer, i + offset));
+
 }
