@@ -12,5 +12,6 @@ int pf_dec(va_list args)
 
 	i = va_arg(args, int);
 	l = print_number(i);
+
 	return (l);
 }
