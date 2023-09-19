@@ -18,7 +18,7 @@ str = va_arg(args, char *);
 		str = ")Null(";
 	}
 	for (i = 0; str[i]; i++)
-		;
+		printf("%c/n", str[i]);
 
 	for (i = i - 1; i >= 0; i--)
 	{
@@ -28,7 +28,7 @@ str = va_arg(args, char *);
 
 		write(1, &z, 1);
 		count++;
-
+		printf("%c/n", str[i])
 	}
 	return (count);
 }
