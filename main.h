@@ -43,5 +43,6 @@ int hexa_code(char ascii_code, char buffer[], int i);
 int pf_ptr(va_list args);
 int is_printable(char c);
 int pf_rev(va_list types);
+int pf_rot13(va_list args);
 
 #endif
