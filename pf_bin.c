@@ -2,7 +2,7 @@
 
 /**
  * pf_bin - function that converts unsign int to binary.
- * @k: an integer.
+ * @args: format string.
  * Return: number of characters printed.
  */
 int pf_bin(va_list args)
