@@ -6,12 +6,13 @@
  * Return: number of characters printed.
  */
 char* to_lhex(unsigned int num) {
+    FILE *fp;
+    static char hex[100];
+    int i = 0;
     if (num == 0) {
         return "0";
     }
 
-    static char hex[100];
-    int i = 0;
 
     while (num != 0) {
         int remainder = num % 16;
@@ -24,12 +25,11 @@ char* to_lhex(unsigned int num) {
         i++;
     }
 
-    FILE *fp;
     fp = fopen("file.txt", "w");
     fwrite(hex, sizeof(char), i, fp);
     fclose(fp);
 
-    hex[i] = '\0'; // Null-terminate the string
+    hex[i] = '\0'; /* Null-terminate the string*/
     return hex;
 }
 
@@ -43,10 +43,9 @@ int pf_lhex(va_list args)
 {
 	char* x;
 	int i ,l;
-	l = _strlen(str);
-
-	x = to_lexu(va_arg(args, unsigned int));
- 	for (i = 0; i < l; i++)
+	x = to_lhex(va_arg(args, unsigned int));
+	l = _strlen(x);
+	for (i = 0; i < l; i++)
 		_putchar(x[i]);
 	return (l);
 }
