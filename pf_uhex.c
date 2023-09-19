@@ -5,16 +5,13 @@
  * @num: input int num.
  * Return: number of characters printed.
  */
-int to_hexu(unsigned int num)
-{
-    char hex[100];
-    int i = 0, j;
-    if (num == 0) 
-    {
-        printf("0");
-        return (i);
+char* to_uhex(unsigned int num) {
+    FILE *fp;
+    static char hex[100];
+    int i = 0;
+    if (num == 0) {
+        return "0";
     }
-
 
 
     while (num != 0) {
@@ -28,12 +25,14 @@ int to_hexu(unsigned int num)
         i++;
     }
 
-    for (j = i - 1; j >= 0; j--) {
-        putchar(hex[j]);
-    }
+    fp = fopen("file.txt", "w");
+    fwrite(hex, sizeof(char), i, fp);
+    fclose(fp);
 
-return (i);
+    hex[i] = '\0'; /* Null-terminate the string*/
+    return hex;
 }
+
 /**
  * pf_oct - function that prints string.
  * @args: format string.
@@ -42,9 +41,11 @@ return (i);
 
 int pf_uhex(va_list args)
 {
-	int i;
-
-	i = to_hexu(va_arg(args, unsigned int));
-
-	return (i);
+	char* x;
+	int i ,l;
+	x = to_lhex(va_arg(args, unsigned int));
+	l = _strlen(x);
+	for (i = l-1; i > l; i--)
+		_putchar(x[i]);
+	return (l);
 }
