@@ -26,9 +26,7 @@ str = va_arg(args, char *);
 
 		char z = str[i];
 
-		write(1, &z, 1);
-		count++;
-		printf("%c", str[i]);
-	}
+		_putchar(str[i]);
+}
 return (count);
 }
