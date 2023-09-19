@@ -7,9 +7,9 @@
  */
 int to_octal(unsigned int num)
 {
-
-    int octal[100];
-    int i = 0;
+	int octal[100];
+	int i = 0;
+	int j;
 
     while (num != 0) {
         octal[i] = num % 8;
@@ -17,7 +17,7 @@ int to_octal(unsigned int num)
         i++;
     }
 
-    for (int j = i - 1; j >= 0; j--) {
+    for (j = i - 1; j >= 0; j--) {
         print_number(octal[j]);
     }
 	return (i);
@@ -30,9 +30,9 @@ int to_octal(unsigned int num)
 
 int pf_oct(va_list args)
 {
-	int i, l;
+	int i;
 
 	i = to_octal(va_arg(args, unsigned int));
 
-	return (l);
+	return (i);
 }
