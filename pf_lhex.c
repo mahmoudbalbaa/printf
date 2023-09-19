@@ -7,14 +7,13 @@
  */
 int to_lexu(unsigned int num)
 {
+    char hex[100];
+    int i = 0;
     if (num == 0) 
     {
         printf("0");
         return;
     }
-
-    char hex[100];
-    int i = 0;
 
     while (num != 0) {
         int remainder = num % 16;
@@ -27,7 +26,6 @@ int to_lexu(unsigned int num)
         i++;
     }
 
-    printf("\nHexadecimal representation in lower case: ");
     for (int j = i - 1; j >= 0; j--) {
         putchar(hex[j]);
     }
@@ -42,9 +40,9 @@ return (i);
 
 int pf_lhex(va_list args)
 {
-	int i;
+	int x;
 
-	i = to_lexu(va_arg(args, unsigned int));
+	x = to_lexu(va_arg(args, unsigned int));
 
-	return (i);
+	return (x);
 }
