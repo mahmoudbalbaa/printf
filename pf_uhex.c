@@ -28,7 +28,6 @@ int to_hexu(unsigned int num)
         i++;
     }
 
-    printf("\nHexadecimal representation in lower case: ");
     for (j = i - 1; j >= 0; j--) {
         putchar(hex[j]);
     }
