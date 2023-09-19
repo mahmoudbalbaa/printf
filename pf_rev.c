@@ -26,7 +26,7 @@ str = va_arg(args, char *);
 
 		char z = str[i];
 
-		_putchar(str[i]);
+		_putchar(z);
 }
 return (count);
 }
