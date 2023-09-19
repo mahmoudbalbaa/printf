@@ -35,5 +35,6 @@ int int_to_binary(unsigned int k);
 int pf_bin(va_list args);
 int pf_uns(va_list args);
 int pf_oct(va_list args);
+int pf_uhex(va_list args);
 
 #endif
