@@ -10,7 +10,7 @@ int pf_Non(va_list args)
 {
 	int i = 0, offset = 0;
 	char *str = va_arg(args, char *);
-	char buffer[1024];
+	char buffer[BUFF_SIZE];
 
 	if (str == NULL)
 		return (write(1, "(null)", 6));
