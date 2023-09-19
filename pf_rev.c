@@ -22,9 +22,9 @@ str = va_arg(args, char *);
 
 	for (i = i - 1; i >= 0; i--)
 	{
-		char z = str[i];
+		/*char z = str[i];*/
 
-		write(1, &z, 1);
+	_putchar(str[i]);
 		count++;
 	}
 	return (count);
