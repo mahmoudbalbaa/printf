@@ -1,19 +1,19 @@
 #include "main.h"
 
 /**
- * print_address - Prints the memory address of a variable.
+ * pf_ptr - Prints the memory address of a variable.
  * @args: A va_list pointing to the variable whose address is to be printed.
  * Return: The number of characters printed.
  */
 
 int pf_ptr(va_list args)
 {
-	void *addr = va_arg(args, void *);
+	void *adr = va_arg(args, void *);
 	int count = 0;
 	char hex_chars[] = "0123456789abcdef";
-	unsigned long num = (unsigned long)addr;
+	unsigned long num = (unsigned long)adr;
 
-	if (addr == NULL)
+	if (adr == NULL)
 	{
 		count += _putchar('(');
 		count += _putchar('n');
@@ -23,18 +23,18 @@ int pf_ptr(va_list args)
 	}
 	else
 	{
-		char buffer[20];
+		char buf[20];
 		int i = 0;
 
 		while (num != 0)
 		{
-			buffer[i++] = hex_chars[num % 16];
+			buf[i++] = hex_chars[num % 16];
 			num /= 16;
 		}
 		count += _putchar('0');
 		count += _putchar('x');
 		while (--i >= 0)
-			count += _putchar(buffer[i]);
+			count += _putchar(buf[i]);
 	}
 	return (count);
 }
