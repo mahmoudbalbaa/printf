@@ -35,3 +35,4 @@ int pf_rot13(va_list args)
 	}
 
 	return (count);
+}
