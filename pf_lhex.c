@@ -20,7 +20,7 @@ int to_lexu(unsigned int num)
         if (remainder < 10) {
             hex[i] = remainder + '0';
         } else {
-            hex[i] = remainder + 'A' - 10;
+            hex[i] = remainder + 'a' - 10;
         }
         num /= 16;
         i++;
