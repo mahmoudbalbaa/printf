@@ -16,7 +16,7 @@ int pf_rev(va_list types)
 	char *str;
 	int i, count = 0;
 
-  str = va_arg(types, char *);
+str = va_arg(types, char *);
 
 	if (str == NULL)
 	{
