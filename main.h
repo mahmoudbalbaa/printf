@@ -38,6 +38,10 @@ int pf_oct(va_list args);
 int pf_uhex(va_list args);
 int pf_lhex(va_list args);
 int pf_Non(va_list args);
+<<<<<<< HEAD
 convert *data_specs(void);
+=======
+int append_hexa_code(char ascii_code, char buffer[], int i);
+>>>>>>> 1169711eeb8db5733a5321a1213fd2876ff2bd23
 
 #endif
