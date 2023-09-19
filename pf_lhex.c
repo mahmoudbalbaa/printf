@@ -45,7 +45,7 @@ int pf_lhex(va_list args)
 	int i ,l;
 	x = to_lhex(va_arg(args, unsigned int));
 	l = _strlen(x);
-	for (i = l-1; i > l; i--)
+	for (i = l-1; i >= 0; i--)
 		_putchar(x[i]);
 	return (l);
 }
