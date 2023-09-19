@@ -28,7 +28,7 @@ str = va_arg(args, char *);
 		/*char z = str[i];*/
 
 		char z = str[i];
-
+		count++;
 		_putchar(z);
 }
 return (count);
