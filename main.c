@@ -10,8 +10,8 @@
 int main(void)
 {
 
-    _printf("Unknown:[%r]\n", "gamal");
-    _printf("Unknown:[%r]\n");
+	_printf("Unknown:[%r]\n", "gamal");
+	_printf("Unknown:[%r]\n");
 
     return (0);
 }
