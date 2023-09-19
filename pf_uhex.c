@@ -43,7 +43,7 @@ int pf_uhex(va_list args)
 {
 	char* x;
 	int i ,l;
-	x = to_lhex(va_arg(args, unsigned int));
+	x = to_uhex(va_arg(args, unsigned int));
 	l = _strlen(x);
 	for (i = l-1; i > l; i--)
 		_putchar(x[i]);
