@@ -37,5 +37,6 @@ int pf_uns(va_list args);
 int pf_oct(va_list args);
 int pf_uhex(va_list args);
 int pf_lhex(va_list args);
+int pf_Non(va_list args);
 
 #endif
