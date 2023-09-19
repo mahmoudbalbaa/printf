@@ -11,17 +11,20 @@ int to_octal(unsigned int num)
 	int i = 0;
 	int j;
 
-    while (num != 0) {
-        octal[i] = num % 8;
-        num /= 8;
-        i++;
-    }
+	while (num != 0)
+	{
+		octal[i] = num % 8;
+		num /= 8;
+		i++;
+	}
 
-    for (j = i - 1; j >= 0; j--) {
-        print_number(octal[j]);
-    }
+	for (j = i - 1; j >= 0; j--)
+	{
+		print_number(octal[j]);
+	}
 	return (i);
 }
+
 /**
  * pf_oct - function that prints string.
  * @args: format string.
