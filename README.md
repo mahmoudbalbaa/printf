@@ -2,18 +2,6 @@ Background Context
 Write your own printf function.
 
 
-
-^ In this picture, Kris, and Jul
-
-Resources
-Read or watch:
-
-Secrets of printf
-Group Projects concept page (Don’t forget to read this)
-Flowcharts concept page
-man or help:
-
-printf (3)
 Requirements
 General
 Allowed editors: vi, vim, emacs
