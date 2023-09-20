@@ -15,19 +15,17 @@ int pf_rev(va_list args)
 
 	if (str == NULL)
 	{
-		str = "%r";
-		_putchar(str[0]);
-		_putchar(str[1]);
-		return (2);
+		return (-1);
 	}
-	for (i = 0; str[i]; i++)
-		printf("%c", str[i]);
+
+	for (i = 0; str[i] != '\0'; i++)
+		;
 
 	for (i = i - 1; i >= 0; i--)
 	{
-		char z = str[i];
-
-		_putchar(z);
+		_putchar(str[i]);
+		count++;
 	}
+
 	return (count);
 }
