@@ -9,37 +9,37 @@
 int print_number(int n)
 {
 	int i = 1;
-	int num, last = n % 10, digit, exp = 1;
+	int m, l = n % 10, digit, exp = 1;
 
 	n = n / 10;
-	num = n;
+	m = n;
 
-	if (last < 0)
+	if (l < 0)
 	{
 		_putchar('-');
-		num = -num;
+		m = -m;
 		n = -n;
-		last = -last;
+		l = -l;
 		i++;
 	}
-	if (num > 0)
+	if (m > 0)
 	{
-		while (num / 10)
+		while (m / 10)
 		{
 			exp = exp * 10;
-			num = num / 10;
+			m = m / 10;
 		}
-		num = n;
+		m = n;
 		while (exp > 0)
 		{
-			digit = num / exp;
+			digit = m / exp;
 			_putchar(digit + '0');
-			num = num - (digit * exp);
+			m = m - (digit * exp);
 			exp = exp / 10;
 			i++;
 		}
 	}
-	_putchar(last + '0');
+	_putchar(l + '0');
 
 	return (i);
 }
